@@ -188,6 +188,29 @@ For this week's assignments:
 - Clean and prepare a dataset with missing values and outliers.
 - Transform unstructured text data into a structured format using regular expressions.
 
+```python
+import pandas as pd
+import numpy as np
+
+# Create a sample dataset with missing values and outliers
+data = {
+    'CustomerID': [101, 102, 103, 104, 105, 106, 107, 108, 109, 110],
+    'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank', 'Grace', 'Helen', 'Ivy', 'Jack'],
+    'Age': [25, 32, 28, np.nan, 40, 22, 35, 48, np.nan, 29],
+    'OrderAmount': [150, 200, 1000, 50, 300, 30, 8000, 90, 150, 7000]
+}
+
+df = pd.DataFrame(data)
+
+# Introduce missing values and outliers
+df.loc[3, 'OrderAmount'] = 10000
+df.loc[8, 'Age'] = 45
+
+# Display the dataset
+print(df)
+
+```
+
 **Slide 14: Tips for Effective Data Preparation**
 
 1. Always understand your data's context.
