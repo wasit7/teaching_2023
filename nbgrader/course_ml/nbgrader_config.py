@@ -9,6 +9,7 @@ c = get_config()
 c.CourseDirectory.course_id = "course_ml"
 
 c.IncludeHeaderFooter.header = "source/header.ipynb"
+c.Exchange.root = "/tmp/exchange"
 
 ###############################################################################
 # End additions by nbgrader quickstart
